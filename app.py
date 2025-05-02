@@ -15,4 +15,5 @@ def summarize():
     return render_template("index.html", summary=summary)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.getenv("PORT", 5000))  # Use the dynamic port
+    app.run(debug=True, host="0.0.0.0", port=port)  # B
